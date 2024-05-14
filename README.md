@@ -1,10 +1,34 @@
-# React + Vite
+# IP Address Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application that allows users to track IP addresses. It is built with React and TailwindCSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Fetch IP address information
+* Display IP address details
+* Display location on the map
 
-<!-- at_f00JCmjaICJFHLGLxhS65AZRhT3hW -->
+## Technologies
+
+* React
+* TailwindCSS
+* Axios
+* React-Leaflet
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+
+## Usage
+
+Visit `http://localhost:3000` in your browser to use the application.
+
+## Contributing
+
+We welcome contributions to this project. Please see the CONTRIBUTING.md file for details.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
