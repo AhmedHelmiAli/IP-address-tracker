@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/pattern-bg-desktop.png')",
+        "hero-sm-pattern": "url('/pattern-bg-mobile.png')",
       },
       screens: {
         sm: "540px",

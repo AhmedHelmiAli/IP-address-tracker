@@ -12,8 +12,7 @@ function App() {
     <div className="justify-center px-6 py-8 md:px-10 md:py-12 ">
       <Header />
       {error && <Error message={error} />}
-      {isLoading && <Loading />}
-      {!isLoading && !error && <Map />}
+      {isLoading ? <Loading /> : <Map />}
     </div>
   );
 }

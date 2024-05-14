@@ -1,6 +1,6 @@
 function Error({ message }) {
   return (
-    <div className="flex w-1/2 max-w-sm mx-auto mt-5 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div className="flex w-4/5 max-w-sm mx-auto mt-10 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
       <div className="flex items-center justify-center w-12 bg-blue-500">
         <svg
           className="w-6 h-6 text-white fill-current"

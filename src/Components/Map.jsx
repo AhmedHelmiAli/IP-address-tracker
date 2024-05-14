@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { DataContext } from "../contexts/DataContext";
-import "leaflet/dist/leaflet.css";
-import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 delete L.Icon.Default.prototype._getIconUrl;
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import "leaflet/dist/leaflet.css";
+import { DataContext } from "../contexts/DataContext";
 
 const ICON = L.icon({
   iconRetinaUrl: markerIcon2x,
