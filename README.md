@@ -1,5 +1,5 @@
 # IP Address Tracker
-
+**Note:** This task was part of my application process for a job.
 This is a React application that allows users to track IP addresses. It is built with React and TailwindCSS.
 
 ## Features
