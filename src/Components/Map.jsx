@@ -1,5 +1,11 @@
 import { useContext } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  ZoomControl,
+} from "react-leaflet";
 import * as L from "leaflet";
 delete L.Icon.Default.prototype._getIconUrl;
 import markerIcon from "leaflet/dist/images/marker-icon.png";
@@ -34,6 +40,7 @@ function Map() {
         style={{ height: "100vh", width: "100%" }}
         scrollWheelZoom={false}
         bounds={outerBounds}
+        zoomControl={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -45,6 +52,7 @@ function Map() {
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
         </Marker>
+        <ZoomControl position="bottomright" />
       </MapContainer>
     </main>
   );

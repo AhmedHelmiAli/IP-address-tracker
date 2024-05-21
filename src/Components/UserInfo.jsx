@@ -7,7 +7,7 @@ function UserInfo() {
 
   if (!latitude || !longitude || error) return;
   return (
-    <div className="relative flex-col mb-[-12rem] md:mb-[-8rem] flex md:flex-row md:justify-between  z-10 w-[92%]  lg:w-4/5   md:px-2 xl:px-10 px-8 pt-5 py-7 mx-auto bg-white rounded-md md:rounded font-semibold sm:gap-x-24 md:gap-x-10 lg:gap-x-16 xl:gap-x-28 ">
+    <div className="relative flex-col mb-[-14rem] md:mb-[-9rem] flex md:flex-row md:justify-between  z-10 w-[92%]  lg:w-4/5   md:px-2 xl:px-10 px-8 pt-5 py-7 mx-auto bg-white rounded-md md:rounded font-semibold sm:gap-x-24 md:gap-x-10 lg:gap-x-16 xl:gap-x-28 ">
       <div className="mb-4 md:mb-0 md:text-left ">
         <h3 className="mb-2 font-sans text-xs uppercase lg:text-md text-slate-500">
           ip address
