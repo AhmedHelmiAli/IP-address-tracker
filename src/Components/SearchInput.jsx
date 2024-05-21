@@ -17,14 +17,13 @@ function SearchInput() {
     try {
       setError(false);
       setIsloading(true);
-      const response = await axios.get(
-        // `https://geo.ipify.org/api/v2/country,city?apiKey=at_eHUa2KiA6RcR4yrUjjEiMbx4V2VBy&ipAddress=${searchInput}`
-        `https://ipapi.co/${searchInput}/json/`
-      );
+      const response = await axios.get(`https://ipapi.co/${searchInput}/json/`);
+      if (response.data.error) {
+        throw new Error(response.data.reason);
+      }
       setUserData(response.data);
-      // console.log(response.data);
     } catch (error) {
-      setError(error.response.data.messages);
+      setError(error.message);
     } finally {
       setIsloading(false);
       prevSearchInput.current = searchInput;

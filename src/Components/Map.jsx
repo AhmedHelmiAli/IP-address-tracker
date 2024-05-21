@@ -17,7 +17,7 @@ const ICON = L.icon({
 });
 
 function Map() {
-  const { userData } = useContext(DataContext);
+  const { userData, error } = useContext(DataContext);
   const { latitude, longitude } = userData;
 
   const outerBounds = [
@@ -25,7 +25,7 @@ function Map() {
     [52.505, 29.09],
   ];
 
-  if (!latitude || !longitude) return;
+  if (!latitude || !longitude || error) return;
   return (
     <main className="relative z-0">
       <MapContainer
