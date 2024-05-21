@@ -18,18 +18,18 @@ const ICON = L.icon({
 
 function Map() {
   const { userData } = useContext(DataContext);
-  const { location } = userData;
+  const { latitude, longitude } = userData;
 
   const outerBounds = [
     [50.505, -29.09],
     [52.505, 29.09],
   ];
 
-  if (!location) return;
+  if (!latitude || !longitude) return;
   return (
     <main className="relative z-0">
       <MapContainer
-        center={{ lat: location.lat, lng: location.lng }}
+        center={{ lat: latitude, lng: longitude }}
         zoom={8}
         style={{ height: "100vh", width: "100%" }}
         scrollWheelZoom={false}
@@ -40,7 +40,7 @@ function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <Marker icon={ICON} position={{ lat: location.lat, lng: location.lng }}>
+        <Marker icon={ICON} position={{ lat: latitude, lng: longitude }}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>

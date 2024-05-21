@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 
 function UserInfo() {
-  const { userData, error } = useContext(DataContext);
-  const { location } = userData;
+  const { userData } = useContext(DataContext);
+  const { latitude, longitude } = userData;
 
-  if (!location || error) return;
+  if (!latitude || !longitude) return;
   return (
     <div className="relative flex-col mb-[-12rem] md:mb-[-8rem] flex md:flex-row md:justify-between  z-10 w-[92%]  lg:w-4/5   md:px-2 xl:px-10 px-8 pt-5 py-7 mx-auto bg-white rounded-md md:rounded font-semibold sm:gap-x-24 md:gap-x-10 lg:gap-x-16 xl:gap-x-28 ">
       <div className="mb-4 md:mb-0 md:text-left ">
@@ -19,23 +19,21 @@ function UserInfo() {
           location
         </h3>
         <p className="text-xl lg:text-xl">
-          <span className="mr-1">{location?.country}</span>
-          <span>{location?.region}</span>
+          <span className="mr-1">{userData?.city}</span>
+          <span>{userData?.country}</span>
         </p>
       </div>
       <div className="mb-4 md:mb-0 md:text-left ">
         <h3 className="mb-2 text-xs uppercase lg:text-md text-slate-500">
           timezone
         </h3>
-        <p className="text-xl lg:text-xl">{location?.timezone}</p>
+        <p className="text-xl lg:text-xl">{userData?.timezone}</p>
       </div>
       <div className="md:text-left ">
         <h3 className="mb-2 text-xs uppercase lg:text-md text-slate-500">
           isp
         </h3>
-        <p className="text-xl lg:text-xl">
-          {location.isp || userData?.as?.name}
-        </p>
+        <p className="text-xl lg:text-xl">{userData.org}</p>
       </div>
     </div>
   );

@@ -18,9 +18,11 @@ function SearchInput() {
       setError(false);
       setIsloading(true);
       const response = await axios.get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_eHUa2KiA6RcR4yrUjjEiMbx4V2VBy&ipAddress=${searchInput}`
+        // `https://geo.ipify.org/api/v2/country,city?apiKey=at_eHUa2KiA6RcR4yrUjjEiMbx4V2VBy&ipAddress=${searchInput}`
+        `https://ipapi.co/${searchInput}/json/`
       );
       setUserData(response.data);
+      // console.log(response.data);
     } catch (error) {
       setError(error.response.data.messages);
     } finally {

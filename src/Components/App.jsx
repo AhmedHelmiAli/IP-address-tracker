@@ -9,7 +9,7 @@ function App() {
   const { isLoading, error } = useContext(DataContext);
 
   return (
-    <div className="justify-center px-6 py-8 md:px-10 md:py-12 ">
+    <div className="px-6 py-8 md:px-10 md:py-12 ">
       <Header />
       {error && <Error message={error} />}
       {isLoading ? <Loading /> : <Map />}
